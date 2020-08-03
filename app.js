@@ -9,6 +9,7 @@ const accountRoute = require('./routes/account');
 const authRoute = require('./routes/auth');
 const systemRoute = require('./routes/system');
 const poolRoute = require('./routes/pool');
+const bucketRoute = require('./routes/bucket');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use('/account', accountRoute);
 app.use('/auth', authRoute);
 app.use('/system', systemRoute);
 app.use('/pool', poolRoute);
+app.use('/bucket', bucketRoute);
 
 app.listen(3000, () => {
   console.log(`app listening at http://localhost:${3000}`)

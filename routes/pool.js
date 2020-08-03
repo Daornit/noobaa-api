@@ -102,8 +102,8 @@ router.post('/cloud', async (req, res) => {
       target_bucket: body.target_bucket,
     };
 
-    if(bi.backingstore) bi.backingstore = body.backingstore;
-    if(bi.storage_limit) bi.storage_limit = body.storage_limit;
+    if(body.backingstore) bi.backingstore = body.backingstore;
+    if(body.storage_limit) bi.storage_limit = body.storage_limit;
 
     let poolinfo = await req.client.pool.create_cloud_pool(bi);
     res.send(poolinfo)

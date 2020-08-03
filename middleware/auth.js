@@ -3,14 +3,14 @@ const api = require('../../noobaa/noobaa-core/src/api');
 async function get_client(req, res, next) {
   var rpc = api.new_rpc();
   var client = rpc.new_client({
-    address: 'ws://127.0.0.1:5001',
-    // address: 'wss://localhost:41071',
+    // address: 'ws://127.0.0.1:5001',
+    address: 'wss://localhost:49404',
   });
 
   var auth_params = {
-      email: 'test@test.com',
-      password: 'Test@123',
-      system: 'batorgil'
+      email: 'wss://localhost:49404',
+      password: 'HheHS5fX+gkxOO0BIqy+KQ==',
+      system: 'noobaa'
   };
 
   // var auth_params = {
